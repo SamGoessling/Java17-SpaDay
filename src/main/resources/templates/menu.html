@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8" />
     <title>Spa Menu</title>
     <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
 </head>
 <body>
+<div class="container">
 <h1>My Super Fancy Spa</h1>
-<div id = "clientProfile">
+
+<div id="clientProfile">
+    <h2>My Profile</h2>
+    <p th:text="${name}">Name</p>
+    <p th:text="${skintype}">Skin Type</p>
+    <p th:text="${#strings.listJoin(manipedi, ', ')}">Mani/Pedi Preference</p>
 </div>
-<div id = "servicesMenu">
+
+<div id="servicesMenu">
+    <table>
+        <thead>
+        <tr><th>Facial Treatments</th></tr>
+        </thead>
+        <tbody>
+        <th:block th:each="facial : ${appropriateFacials}">
+            <tr><td th:text="${facial}">Facial Treatment</td></tr>
+        </th:block>
+        </tbody>
+    </table></div>
+
+    <div th:if="${#lists.contains(manipedi, 'manicure')}">
+        <h3>Manicure</h3>
+        <p th:replace="fragments :: manicure">Manicure Description</p>
+    </div>
+
+    <div th:if="${#lists.contains(manipedi, 'pedicure')}">
+        <h3>Pedicure</h3>
+        <p th:replace="fragments :: pedicure">Pedicure Description</p>
+    </div>
+
+    <div th:if="${#lists.contains(manipedi, 'mani-pedi')}">
+        <h3>Mani-Pedi</h3>
+        <p th:replace="fragments :: mani-pedi">Mani-Pedi Description</p>
+    </div>
+
+    <div class="footer">
+        <div class="polish red-polish"></div>
+        <div class="polish blue-polish"></div>
+        <div class="polish green-polish"></div>
+        <div class="polish purple-polish"></div>
+    </div>
 </div>
 </body>
 </html>

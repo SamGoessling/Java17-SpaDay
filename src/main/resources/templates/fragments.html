@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
     <title>Fragments</title>
+    <link href="/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
 </head>
 <body>
-<p th:fragment = "manicureDescription">Our manicure is a great way to spend 30 minutes of your day! We use shea butter hand cream and the finest gel polish.</p>
-<p th:fragment = "pedicureDescription">Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs are here to get your feet in shape for sandal season!</p>
+<!--//manicure description fragment//-->
+<p th:fragment="manicure">Our manicure is a great way to spend 30 minutes of your day! We use shea butter hand cream and the finest gel polish.</p>
+
+<!--//pedicure//-->
+<p th:fragment="pedicure">Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs are here to get your feet in shape for sandal season!</p>
+
+<!--//manipedi//-->
+<p th:fragment="mani-pedi">Relax for over an hour in pure luxury! Our mani-pedi is a great way to spend your day!
+    We use shea butter hand cream and the finest gel polish.
+    Afterwards, our massage chairs and experienced nail techs are here to get your feet in shape for sandal season.
+    Leave My Super Fancy Spa feeling refreshed and ready to take on the world!</p>
 </body>
 </html>

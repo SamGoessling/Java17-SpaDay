@@ -5,56 +5,55 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center children vertically */
-    align-items: center; /* Center children horizontally */
-    height: 100vh; /* Full height of the viewport */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    text-align: center; /* Center text for all child elements */
+    text-align: center;
     background-color: rgba(23, 23, 23, 0.83);
     padding: 20px;
-    border-radius: 15px; /* Optional: for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0); /* Optional: for box shadow */
-    width: 80%; /* Set a max-width or fixed width as needed */
-    max-width: 500px; /* Maximum width of the container */
-    margin: auto; /* Center the container in the viewport */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0);
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
 }
 
-/* Style headings and paragraphs directly for consistency */
 h1, h2, h3 {
     color: white;
     font-variant: small-caps;
-    margin: 0; /* Remove default margins */
-    padding: 10px 0; /* Add some vertical padding */
+    margin: 0;
+    padding: 10px 0;
 }
 
 table {
-    margin: 20px auto; /* Center table within its parent and add some vertical space */
-    width: auto; /* Let the table take the width of its content */
-    border-collapse: collapse; /* Optional: for tables without gaps between cells */
+    margin: 20px auto;
+    width: auto;
+    border-collapse: collapse;
 }
 
 td {
-    padding: 10px; /* Spacing inside table cells */
-    border: 1px solid #000000; /* Border for table cells */
+    padding: 10px;
+    border: 1px solid #000000;
 }
 
 th {
     font-variant: small-caps;
     color: white;
-    padding: 10px; /* Spacing inside table cells */
-    border: 1px solid #000000; /* Border for table cells */
+    padding: 10px;
+    border: 1px solid #000000;
 }
 
 .footer {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 15px; /* Optional: for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for box shadow */
-    width: auto; /* Let the footer take the width of its content */
-    margin-top: 20px; /* Add some space above the footer */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    margin-top: 20px;
 }
 
 .polish {
@@ -62,10 +61,12 @@ th {
     height: 50px;
     margin: 5px;
     border: 1px solid black;
-    display: inline-block; /* Display polish colors in a line */
+    display: inline-block;
 }
 
 .red-polish {background-color: #be1b1b;}
 .blue-polish {background-color: #2b2bcc;}
 .green-polish {background-color: #189118;}
 .purple-polish {background-color: rebeccapurple;}
+.yellow-polish {background-color: #ffff53;}
+.basic-polish {background-color: #f3eeee;}
